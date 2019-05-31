@@ -36,7 +36,7 @@
 }
 
 .screen-reader-text {
-    font-size: inherit;
+    @extend .sr-only;
 }
 
 .alignleft {
@@ -52,7 +52,7 @@
 }
 
 .aligncenter {
-    margin: 0px auto;
+    @extend .mx-auto;
 }
 
 // Post design
@@ -139,4 +139,8 @@ a.skip-link {
     @include hover-focus {
         color: $navbar-dark-active-color;
     }
+}
+
+.navbar h1 {
+    font-weight: $font-weight-normal;
 }
